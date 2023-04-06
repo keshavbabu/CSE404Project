@@ -171,3 +171,5 @@ PS C:\Users\muiph\OneDrive\Documents\CSE404Project>
 - Epoch 20/20
 69/69 [==============================] - 9s 136ms/step - loss: 0.0591 - accuracy: 0.9821 - val_loss: 0.7317 - val_accuracy: 0.8114
 
+- more info about this model here [ResNet50_2 more info](https://github.com/RakerZh/character_recogonition)
+
