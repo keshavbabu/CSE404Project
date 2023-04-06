@@ -9,6 +9,16 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.utils import to_categorical
+import numpy as np
+
+def preprocess_image(img_path):
+    img = load_img(img_path, target_size=(400, 300))
+    x = img_to_array(img)
+    x = x.astype('float32') / 255.0
+    return x
+
 def plot_model_trained(model_trained):
     plt.plot(model_trained.model_trained['accuracy'])
     plt.plot(model_trained.model_trained['val_accuracy'])
