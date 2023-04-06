@@ -127,3 +127,47 @@ Test Error:
 Done!
 PS C:\Users\muiph\OneDrive\Documents\CSE404Project> 
 ```
+
+## ResNet50_2
+
+- Epoch 1/20
+69/69 [==============================] - 13s 196ms/step - loss: 2.4123 - accuracy: 0.3740 - val_loss: 4.1282 - val_accuracy: 0.0073
+- Epoch 2/20
+69/69 [==============================] - 9s 136ms/step - loss: 1.0163 - accuracy: 0.6971 - val_loss: 4.1277 - val_accuracy: 0.0220
+- Epoch 3/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.6895 - accuracy: 0.7809 - val_loss: 4.1276 - val_accuracy: 0.0201
+- Epoch 4/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.5167 - accuracy: 0.8272 - val_loss: 4.1276 - val_accuracy: 0.0220
+- Epoch 5/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.4152 - accuracy: 0.8579 - val_loss: 4.1277 - val_accuracy: 0.0201
+- Epoch 6/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.3764 - accuracy: 0.8616 - val_loss: 4.1277 - val_accuracy: 0.0073
+- Epoch 7/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.2979 - accuracy: 0.8960 - val_loss: 4.1277 - val_accuracy: 0.0201
+- Epoch 8/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.2994 - accuracy: 0.8941 - val_loss: 4.1277 - val_accuracy: 0.0201
+- Epoch 9/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.2654 - accuracy: 0.9070 - val_loss: 4.1277 - val_accuracy: 0.0201
+- Epoch 10/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.1742 - accuracy: 0.9349 - val_loss: 4.1262 - val_accuracy: 0.0201
+- Epoch 11/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.2485 - accuracy: 0.9203 - val_loss: 3.8424 - val_accuracy: 0.1337
+- Epoch 12/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.1973 - accuracy: 0.9290 - val_loss: 2.9942 - val_accuracy: 0.3114
+- Epoch 13/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.1713 - accuracy: 0.9459 - val_loss: 1.7513 - val_accuracy: 0.5659
+- Epoch 14/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.1986 - accuracy: 0.9345 - val_loss: 1.2526 - val_accuracy: 0.6319
+- Epoch 15/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.1955 - accuracy: 0.9363 - val_loss: 0.7002 - val_accuracy: 0.8040
+- Epoch 16/20
+69/69 [==============================] - 9s 137ms/step - loss: 0.1098 - accuracy: 0.9597 - val_loss: 0.6716 - val_accuracy: 0.7875
+- Epoch 17/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.0499 - accuracy: 0.9863 - val_loss: 0.6050 - val_accuracy: 0.8077
+- Epoch 18/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.0404 - accuracy: 0.9895 - val_loss: 0.6964 - val_accuracy: 0.8022
+- Epoch 19/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.0174 - accuracy: 0.9963 - val_loss: 0.5624 - val_accuracy: 0.8388
+- Epoch 20/20
+69/69 [==============================] - 9s 136ms/step - loss: 0.0591 - accuracy: 0.9821 - val_loss: 0.7317 - val_accuracy: 0.8114
+
