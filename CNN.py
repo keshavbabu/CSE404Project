@@ -1,5 +1,8 @@
 import pandas
 import random
+import numpy as np
+from sklearn.metrics import classification_report
+from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import matplotlib.image as img
@@ -75,11 +78,14 @@ switcher = {
             51: "p", 52: "q", 53: "r", 54: "s", 55: "t", 56: "u", 57: "v", 58: "w", 59: "x", 60: "y",
             61: "z"}
 
+label_encoder = LabelEncoder()
+_ = label_encoder.fit_transform(data['label'])
+
 maxes = list(pandas.DataFrame(pred).idxmax(axis=1))
 for i in range(len(test)):
     print("Real:", test.at[i, 'label'], " Pred: ", switcher.get(maxes[i], "error"))
 
 y_pred_classes = np.argmax(pred, axis=1)
-y_true_classes = np.argmax(val['label'], axis=1)
+y_true_classes = np.argmax(np.array(val['label']), axis=1)
 
-print("Classification Report:\n", classification_report(y_true_classes, y_pred_classes, target_names=LabelEncoder().fit_transform(data['label']).classes_))
+print("Classification Report:\n", classification_report(y_true_classes, y_pred_classes, target_names=label_encoder.classes_))
