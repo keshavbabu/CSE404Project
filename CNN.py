@@ -1,6 +1,6 @@
 import pandas
 import random
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import matplotlib.image as img
 import matplotlib.pyplot as plt
@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense
 
 data_path = r"./Data/"
 
-data = pandas.read_csv(data_path + '/english.csv')
+data = pandas.read_csv(data_path + 'english.csv')
 rand = random.sample(range(len(data)), 500)
 val = pandas.DataFrame(data.iloc[rand, :].values, columns=['image', 'label'])
 # remove the added data
@@ -78,3 +78,8 @@ switcher = {
 maxes = list(pandas.DataFrame(pred).idxmax(axis=1))
 for i in range(len(test)):
     print("Real:", test.at[i, 'label'], " Pred: ", switcher.get(maxes[i], "error"))
+
+y_pred_classes = np.argmax(pred, axis=1)
+y_true_classes = np.argmax(val['label'], axis=1)
+
+print("Classification Report:\n", classification_report(y_true_classes, y_pred_classes, target_names=LabelEncoder().fit_transform(data['label']).classes_))
