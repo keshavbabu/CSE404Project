@@ -61,7 +61,7 @@ test_data = data_generator.flow_from_dataframe(
 )
 
 model = RandomForestClassifier(n_estimators = 49, criterion = 'entropy', random_state = 42)
-model.fit(x=training_data, validation_data=validation_data_frame, epochs=10)
+model.fit(X=training_data, y=data['label'])
 pred = model.predict(test_data)
 
 
