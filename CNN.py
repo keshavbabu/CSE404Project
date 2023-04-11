@@ -1,13 +1,15 @@
 import pandas
 import random
 import numpy as np
+from tensorflow import keras
 from sklearn.metrics import classification_report
 from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import matplotlib.image as img
 import matplotlib.pyplot as plt
-from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense
+from keras.layers import Conv2D, MaxPool2D, Flatten, Dense
+from keras.utils import to_categorical
 
 data_path = r"./Data/"
 
@@ -78,14 +80,10 @@ switcher = {
             51: "p", 52: "q", 53: "r", 54: "s", 55: "t", 56: "u", 57: "v", 58: "w", 59: "x", 60: "y",
             61: "z"}
 
-label_encoder = LabelEncoder()
-_ = label_encoder.fit_transform(data['label'])
-
 maxes = list(pandas.DataFrame(pred).idxmax(axis=1))
 for i in range(len(test)):
     print("Real:", test.at[i, 'label'], " Pred: ", switcher.get(maxes[i], "error"))
-
-y_pred_classes = np.argmax(pred, axis=1)
-y_true_classes = np.argmax(np.array(val['label']), axis=1)
-
-print("Classification Report:\n", classification_report(y_true_classes, y_pred_classes, target_names=label_encoder.classes_))
+new_max = []
+for i in maxes:
+    new_max.append(switcher.get(i))
+print("Classification Report:\n", classification_report(test['label'], new_max))

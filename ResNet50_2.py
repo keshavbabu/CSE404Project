@@ -48,7 +48,8 @@ data['label'] = label_encoder.fit_transform(data['label'])
 
 images = [preprocess_image("./Data/"+image_path) for image_path in data['image']]
 X = np.array(images)
-y = to_categorical(data['label'], num_classes=62)  
+
+y = to_categorical(data['label'], num_classes=62)
 
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
